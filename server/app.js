@@ -2,8 +2,15 @@ const express = require('express');
 const { graphqlHTTP } = require('express-graphql'); 
 const schema = require('./schema/schema');
 const mongoose = require('mongoose');
+const cors = require('cors');
+// const { ApolloServer } = require('apollo-server-express');
 
 const app = express();
+
+// allow cross-origin requests
+app.use(cors());
+// const server = new ApolloServer({ schema });
+// server.applyMiddleware({ app });
 
 // connect to the mlab (mongodb atlas) database
 // replace <username> and <password>
