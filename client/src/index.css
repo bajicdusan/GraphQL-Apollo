@@ -83,3 +83,24 @@ form button {
   box-sizing: border-box;
   color: #fff;
 }
+
+/*test*/
+#users{
+  background-color: red;
+  color: #fff;
+}
+
+#chatUsers{
+  background-color: green;
+  color: #fff;
+}
+
+#messages{
+  background-color: blue;
+  color: #fff;
+}
+
+#chats{
+  background-color: black;
+  color: #fff;
+}
