@@ -1,4 +1,4 @@
-body {
+/* body {
   background: #eee;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -81,5 +81,26 @@ form button {
   overflow: auto;
   box-shadow: -2px -3px 5px rgba(0,0,0,0.3);
   box-sizing: border-box;
+  color: #fff;
+} */
+
+/*test*/
+#users{
+  background-color: red;
+  color: #fff;
+}
+
+#chatUsers{
+  background-color: green;
+  color: #fff;
+}
+
+#messages{
+  background-color: blue;
+  color: #fff;
+}
+
+#chats{
+  background-color: black;
   color: #fff;
 }
