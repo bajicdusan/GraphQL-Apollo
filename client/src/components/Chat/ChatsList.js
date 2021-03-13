@@ -1,0 +1,44 @@
+import React, { Component } from 'react';
+import { graphql } from 'react-apollo';
+import { getChatsQuery } from '../../queries/chat-queries';
+
+// components
+import ChatDetails from './ChatDetails';
+
+class ChatsList extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            selected: null
+        }
+    }
+
+    displayChats() {
+        var data = this.props.data;
+        if (data.loading) {
+            return(<div>Loading Chats...</div>)
+        } else {
+            return data.chats.map(chat => {
+                return(
+                    <li key={ chat.id } onClick={(e) => { this.setState({ selected: chat.id })}}>{ chat.header }</li>
+                );
+            })
+        }
+    }
+
+    render() {
+        // console.log("chatList-below:")
+        // console.log(this.props);
+
+        return (
+            <div>
+                <ul id="chats-list">
+                    { this.displayChats() }
+                </ul>
+                <ChatDetails chatId={ this.state.selected }/>
+            </div>
+        );
+    }
+}
+
+export default graphql(getChatsQuery)(ChatsList);
